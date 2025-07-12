@@ -6,14 +6,20 @@
 //
 
 import UIKit
+import HotReloading
+
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .black
     }
-
-
 }
 
+
+extension UIViewController {
+    @objc func injected(){
+        viewDidLoad()
+    }
+}
